@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "unpaywall-mcp-server"
+version = "1.0.0"
+description = "MCP server for the Unpaywall API — open-access availability for 120M+ scholarly articles"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "SMABoundless" },
+]
+keywords = ["mcp", "unpaywall", "open-access", "scholarly", "doi"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "mcp[cli]>=1.0.0",
+    "httpx>=0.27.0",
+]
+
+[project.scripts]
+unpaywall-mcp-server = "unpaywall_mcp_server:main"
+
+[project.urls]
+Homepage = "https://github.com/SMABoundless/unpaywall-mcp-server"
+Repository = "https://github.com/SMABoundless/unpaywall-mcp-server"

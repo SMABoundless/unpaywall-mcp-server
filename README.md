@@ -31,6 +31,12 @@ Unpaywall requires an email address as your API identifier (no API key needed). 
 ### 2. Install
 
 ```bash
+pip install unpaywall-mcp-server
+```
+
+Or install from source:
+
+```bash
 cd unpaywall-mcp-server
 python3 -m venv venv
 source venv/bin/activate
@@ -45,8 +51,8 @@ Add this to your `claude_desktop_config.json`:
 {
   "mcpServers": {
     "unpaywall": {
-      "command": "/path/to/unpaywall-mcp-server/venv/bin/python",
-      "args": ["/path/to/unpaywall-mcp-server/server.py"],
+      "command": "uvx",
+      "args": ["unpaywall-mcp-server"],
       "env": {
         "UNPAYWALL_EMAIL": "your-email@example.com"
       }
@@ -59,8 +65,7 @@ Or if using Claude Code CLI:
 
 ```bash
 claude mcp add unpaywall \
-  /path/to/unpaywall-mcp-server/venv/bin/python \
-  /path/to/unpaywall-mcp-server/server.py \
+  uvx unpaywall-mcp-server \
   -e UNPAYWALL_EMAIL=your-email@example.com
 ```
 
@@ -74,3 +79,5 @@ claude mcp add unpaywall \
 ## License
 
 MIT
+
+<!-- mcp-name: io.github.smaboundless/unpaywall -->
