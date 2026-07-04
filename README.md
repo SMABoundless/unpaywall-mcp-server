@@ -80,4 +80,4 @@ claude mcp add unpaywall \
 
 MIT
 
-<!-- mcp-name: io.github.smaboundless/unpaywall -->
+<!-- mcp-name: io.github.SMABoundless/unpaywall -->

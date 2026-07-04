@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "unpaywall-mcp-server"
-version = "1.0.0"
+version = "1.0.1"
 description = "MCP server for the Unpaywall API — open-access availability for 120M+ scholarly articles"
 readme = "README.md"
 license = "MIT"
